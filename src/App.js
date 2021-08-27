@@ -8,6 +8,10 @@ import Notification from "./components/notification";
 
 class App extends Component {
 
+    // static propTypes = {
+        
+    // }
+
     state = {
         good: 0,
         neutral: 0,
