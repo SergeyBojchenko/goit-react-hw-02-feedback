@@ -1,8 +1,9 @@
 import React from 'react';
+import styles from "./listStatistics.module.css"
 
 const ListStatistics = ({good, neutral, bad, total, positiveFeedbackPercentage}) => (
     <>
-        <ul>
+        <ul className={styles.listStatistics}>
             <li>
                 <p>Good:</p><span>{good}</span>
             </li>

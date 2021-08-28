@@ -1,16 +1,27 @@
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import Section from './components/section';
 import FeedbackOptions from "./components/feedback-options";
 import ListStatistics from "./components/list-statistics";
 import Notification from "./components/notification";
+import './base-style.module.css';
 
 
 class App extends Component {
 
-    // static propTypes = {
-        
-    // }
+    
+    static propTypes = {
+        title: PropTypes.string,
+        onIncrementFeedback: PropTypes.func.isRequired,
+        options: PropTypes.object.isRequired,
+        good: PropTypes.number.isRequired,
+        neutral: PropTypes.number.isRequired,
+        bad: PropTypes.number.isRequired,
+        total: PropTypes.number.isRequired,
+        positiveFeedbackPercentage: PropTypes.func.isRequired,
+    };
+
+    
 
     state = {
         good: 0,
